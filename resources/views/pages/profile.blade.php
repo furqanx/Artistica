@@ -51,9 +51,9 @@
                             <div class="mb-5">
                                 <p class="lead fw-normal mb-1">About</p>
                                 <div class="p-4" style="background-color: #f8f9fa;">
-                                    <p class="font-italic mb-1">{{ $users->status }}</p>
-                                    <p class="font-italic mb-1">{{ $users->description }}</p>
-                                    <p class="font-italic mb-0">{{ $users->birthdate }}</p>
+                                    <pre class="font-italic mb-1">Status      : {{ $users->status }}</pre>
+                                    <pre class="font-italic mb-1">Desctiption : {{ $users->description }}</pre>
+                                    <pre class="font-italic mb-0">Birthday    : {{ $users->birthdate }}</pre>
                                 </div>
                             </div>
 

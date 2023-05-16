@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('components.sidebar')
+    @include('components.navbar')
     
     <!-- user profile -->
     <div class="people-container">
@@ -36,7 +36,7 @@
                 @foreach ($posts as $post)
                     <div class="row justify-content-center p-3">
                         <div class="col-sm-12 col-md-8 col-lg-6">
-                            <div class="card">
+                            <div class="card" width="350" height="400">
                                 <!-- Lokasi postingan -->
                                 <div>
                                     <div class="d-flex justify-content-between">
