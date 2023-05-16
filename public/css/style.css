@@ -11,7 +11,7 @@ body {
     width: 100%;
     z-index: 1;
     float: left;
-    width: 200px;
+    width: 50px;
     display: inline;
     left: 0%;
     right: 0%;
@@ -21,6 +21,7 @@ body {
     justify-content: space-around;
     background: #fcf8f8;
     box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 0px;
 }
 
 .logo {
@@ -146,6 +147,9 @@ body {
 /* } */
 /** Halaman Profile */
 
+.container-pro {
+    padding-top: 15px;
+}
 /** Halaman Edit Profile */
 /* body{
     background: rgb(99, 39, 120)
