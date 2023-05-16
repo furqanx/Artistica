@@ -2,7 +2,7 @@
 
 @section('content')
 
-    @include('components.sidebar')
+    @include('components.navbar')
     
     <!-- user profile -->
     <div class="people-container">
