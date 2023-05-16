@@ -1,0 +1,355 @@
+body {
+  background:#eee;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/** Halaman Home **/
+.people-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 20px;
+}
+.people {
+  padding: 20px;
+}
+.people-avatar {
+  width: 70px;
+}
+.search-container {
+  position: absolute;
+  width: 379px;
+  height: 39px;
+  left: 170px;
+  top: 190px;
+  background: #d9d9d9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+.find {
+  padding: 10px;
+  margin-left: 5px;
+}
+.bi.bi-search {
+  margin-right: 10px;
+}
+
+.line {
+  position: absolute;
+  width: 1039px;
+  height: 0px;
+  left: 15%;
+  top: 268px;
+
+  border: 1px solid #9b8989;
+}
+
+.date {
+  position: absolute;
+  width: 130px;
+  height: 19px;
+  left: 80%;
+  top: 233px;
+
+  font-family: "Inria Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #463e48;
+}
+/** Halaman Home */
+
+
+/** Halaman Profile */
+/* .gradient-custom-2 { */
+  /* fallback for old browsers */
+  /* background: #fbc2eb; */
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1)); */
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1)) */
+/* } */
+/** Halaman Profile */
+
+
+/** Halaman Edit Profile */
+/* body{
+    background: rgb(99, 39, 120)
+} */
+
+.form-control:focus{
+    box-shadow: none;border-color: #BA68C8
+}
+
+.profile-button{
+    background: rgb(99, 39, 120);box-shadow: none;border: none
+}
+
+.profile-button:hover{
+    background: #682773
+}
+
+.profile-button:focus{
+    background: #682773;box-shadow: none
+}
+
+.profile-button:active{
+    background: #682773;box-shadow: none
+}
+
+.back:hover{
+    color: #682773;cursor: pointer
+}
+
+.labels{
+    font-size: 11px
+
+}
+
+.add-experience:hover{
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+/** Halaman Edit Profile */
+
+/** Halaman Upload Postingan */
+.card-0 {
+    min-height: 110vh;
+    background: linear-gradient(-20deg, rgb(255, 255, 255) 50%, #0275d8 50%);
+    color: white;
+    border: 0px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 25px !important;
+    font-weight: 500;
+}
+
+.container {
+    padding-top: 100px !important;
+    border-radius: 20px;
+}
+
+.btn {
+    letter-spacing: 1px;
+}
+
+select:active{
+    box-shadow: none !important;
+    outline-width: 0 !important;
+
+}
+select:after{
+    box-shadow: none !important;
+    outline-width: 0 !important;
+
+}
+input,
+textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 0px !important;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px;
+    resize: none;
+
+}
+
+select:focus,
+input:focus {
+    box-shadow: none !important;
+    border: 1px solid #2196F3 !important;
+    outline-width: 0 !important;
+    font-weight: 400
+}
+
+label {
+    margin-bottom: 2px;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+.form-control {
+    height: calc(2em + .75rem + 3px);
+}
+
+.inner-card {
+    margin: 79px 0px 70px 0px;
+}
+
+.card-0 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.card-1 {
+    border-radius: 17px;
+    color: black;
+    box-shadow: 2px 4px 15px 0px rgb(0, 0, 0 , 0.5) !important;
+}
+
+#file {
+    border: 2px dashed #92b0b3 !important;
+
+}
+
+.color input {
+    background-color: #f1f1f1;
+}
+
+.files:before {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    width: 100%;
+    content: attr(data-before);
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+#imageInput {
+    display: inline-block;
+    width: 100%;
+    padding: 95px 0 0 100%;
+    background: url('https://i.imgur.com/VXWKoBD.png') top center no-repeat #fff;
+    background-size: 55px 55px;
+}
+
+.dropzone {
+	width: 100px;
+	height: 80px;
+	border: 1px dashed #999;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.upload-icon {
+	margin: 25px 2px 2px 2px;
+}
+
+.upload-input {
+	position: relative;
+	top: -62px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+/** Halaman Upload Postingan */
+
+
+/** Halaman Postingan **/
+.post-content{
+    background: #f8f8f8;
+    border-radius: 4px;
+    width: 100%;
+    border: 1px solid #f1f2f2;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .post-content img.post-image, video.post-video, .google-maps{
+    width: 100%;
+    height: auto;
+  }
+  
+  .post-content .google-maps .map{
+    height: 300px;
+  }
+  
+  .post-content .post-container{
+    padding: 20px;
+  }
+  
+  .post-content .post-container .post-detail{
+    margin-left: 65px;
+    position: relative;
+  }
+  
+  .post-content .post-container .post-detail .post-text{
+    line-height: 24px;
+    margin: 0;
+  }
+  
+  .post-content .post-container .post-detail .reaction{
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .post-content .post-container .post-detail .post-comment{
+    display: inline-flex;
+    margin: 10px auto;
+    width: 100%;
+  }
+  
+  .post-content .post-container .post-detail .post-comment img.profile-photo-sm{
+    margin-right: 10px;
+  }
+  
+  .post-content .post-container .post-detail .post-comment .form-control{
+    height: 30px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    margin: 7px 0;
+    min-width: 0;
+  }
+  
+  img.profile-photo-md {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+  }
+  
+  img.profile-photo-sm {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+  }
+  
+  .text-green {
+      color: #8dc63f;
+  }
+  
+  .text-red {
+      color: #ef4136;
+  }
+  
+  .following {
+      color: #8dc63f;
+      font-size: 12px;
+      margin-left: 20px;
+  }
+/** Halaman Postingan **/
