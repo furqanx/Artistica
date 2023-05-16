@@ -4,6 +4,77 @@ body {
 }
 
 /** Halaman Home **/
+
+.sidebar-container {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    float: left;
+    width: 50px;
+    display: inline;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    align-items: center;
+    justify-content: space-around;
+    background: #fcf8f8;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 20px 20px 0px;
+}
+
+.logo {
+    width: 50px;
+}
+.avatar {
+    width: 30px;
+    left: 9.57%;
+    right: 10.64%;
+    top: 12.3%;
+    bottom: 80.37%;
+}
+.home {
+    width: 30px;
+    left: 23.4%;
+    right: 23.4%;
+    top: 28.52%;
+    bottom: 67.15%;
+}
+
+.plus {
+    width: 30px;
+    left: 23.4%;
+    right: 23.4%;
+    top: 38.38%;
+    bottom: 56.74%;
+}
+.out {
+    width: 30px;
+    left: 23.4%;
+    right: 23.4%;
+    top: 38.38%;
+    bottom: 56.74%;
+}
+
+.profile {
+    margin: 4px 0px;
+    padding: 10px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.bar {
+    margin: 20px 0px;
+    padding: 10px;
+}
+.logout {
+    margin: 4px 0px;
+    padding: 10px;
+    padding-top: 160px;
+    padding-bottom: 40px;
+}
+
 .people-container {
     display: flex;
     flex-flow: row wrap;
@@ -14,7 +85,9 @@ body {
     padding: 20px;
 }
 .people-avatar {
-    width: 70px;
+    width: 80px;
+    border-radius: 100%;
+    height: 80px;
 }
 .search-container {
     position: absolute;
@@ -74,6 +147,9 @@ body {
 /* } */
 /** Halaman Profile */
 
+.container-pro {
+    padding-top: 15px;
+}
 /** Halaman Edit Profile */
 /* body{
     background: rgb(99, 39, 120)
