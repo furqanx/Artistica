@@ -2,8 +2,8 @@
     <div class="d-flex w-100 justify-content-between">
         <div>
             <a class="navbar-brand" href="{{ route('home') }}">
-                {{-- <img src="{{ asset('img/logo.svg') }}" width="160" height="80"> --}}
-                Artistica
+               <img src="{{ asset('img/logo.svg') }}" width="160" height="30">
+                
             </a>
         </div>
 
