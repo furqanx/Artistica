@@ -8,14 +8,16 @@
 
                     <div class="px-5 ms-xl-4">
                         <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
-                        <span class="h1 fw-bold mb-0">Logo</span>
+                        <span class="h1 fw-bold mb-0"></span>
+                        <span class="h1 fw-bold mb-0"><img src="{{ asset('img/logo.svg') }}" class="w-40 vh-40" width="200" height="200"></span>
+
                     </div>
 
                     <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
                         <form style="width: 23rem;" action="{{ route('register.store') }}" method="POST">
                             @csrf
                             
-                            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign Up</h3>
+                            <h3 class="fw-normal mb-3 pb-3 mt-5" style="letter-spacing: 1px;">Sign Up</h3>
                             
                             <div class="form-outline mb-4">
                                 <input type="text" id="" class="form-control form-control-lg" name="name"/>
