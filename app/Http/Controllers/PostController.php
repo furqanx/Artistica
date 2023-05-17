@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post_Likes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Posts;
@@ -50,8 +51,9 @@ class PostController extends Controller
     {
         $auth_user = auth()->user();
         $posts = Posts::findOrFail($id);
-        // $post_comments = $posts->Comments[0];
+        $likeCount = $posts->post_likes->count(); // menghitung jumlah like yang dimiliki oleh suatu postingan
         $comments = Comments::where('post_id', $id)->get(); // 
+        // $post_comments = $posts->Comments[0];
 
         // dd($posts->image_path);                          // gambar postingan
         // dd($posts->Users->name);                         // nama pemilik postingan
@@ -60,7 +62,7 @@ class PostController extends Controller
         // dd($posts->Comments[0]->Users->name);            // nama user yang memberikan komentar
         // dd($posts->Comments[0]->comment_content);        // kalimat komentar / isi dari komentar
         
-        return view('pages.post', compact('posts', 'auth_user', 'comments'));
+        return view('pages.post', compact('posts', 'auth_user', 'comments', 'likeCount'));
     }
 
     public function comment(Request $request, $id)
@@ -92,6 +94,32 @@ class PostController extends Controller
         $post->delete();
 
         return redirect()->route('home')->with('success', 'Postingan berhasil dihapus.');
+    }
+    
+    public function like($id)
+    {
+        $user = Auth::user();
+        $post = Posts::findOrFail($id);
+
+        $existingLike = Post_Likes::where('post_id', $post->id)
+                                ->where('user_id', $user->id)
+                                ->first();
+
+        if (!$existingLike) {
+            // Tambahkan like jika belum ada
+            $likes = new Post_Likes();
+            $likes->user_id = $user->id;
+            $likes->post_id = $post->id;
+            $likes->save();
+
+            return redirect()->route('post.show', ['id' => $id])->with('success', 'Likes a post');
+        } 
+        else {
+            // Jika sudah ada like dengan user_id yang sama, hapus like tersebut
+            $existingLike->delete();
+
+            return redirect()->route('post.show', ['id' => $id])->with('success', 'Cancelled like');
+        }
     }
 }
 
