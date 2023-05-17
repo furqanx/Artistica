@@ -36,7 +36,7 @@
                                     <a href="{{ route('profile.show', ['id' => $posts->Users->id]) }}" class="profile-link">{{ $posts->Users->name }}</a> 
                                     {{-- <span class="following">following</span> --}}
                                 </h5>
-                                {{-- <p class="text-muted">Published a photo about 3 mins ago</p> --}}
+                                <p class="text-muted">Published a photo about {{ $posts->published_time }}</p>
                             </div>
                             
                             {{-- <div class="reaction">
@@ -55,32 +55,24 @@
                             </div>
                             
                             <div class="line-divider"></div>
-
-                            {{-- @if (!empty($post_comments->Users->id))
-                                @foreach ($post_comments as $post_comment)
-                                    <div class="post-comment">
-                                        <img src="{{ asset('img/profile/'. ($post_comment->Users->image_path ?? 'profile.svg')) }}" alt="" class="profile-photo-sm">
-                                        <p>
-                                            <a href="timeline.html" class="profile-link">{{ $post_comment->Users->name ?? '' }} </a>
-                                            <i class="em em-laughing"></i> 
-                                            {{ $post_comment->comment_content ?? '' }} 
-                                        </p>
-                                    </div>
-                                @endforeach
-                            @endif --}}
-                            @if (!empty($comments))
-                                @foreach ($comments as $comment)
-                                    <div class="post-comment">
-                                        <img src="{{ asset('img/profile/'. ($comment->Users->image_path ?? 'profile.svg')) }}" alt="" class="profile-photo-sm">
+                            
+                            @foreach ($comments as $comment)
+                                <div class="post-comment">
+                                    @if (!empty($comment->Users->id))
+                                    <img src="{{ asset('img/profile/'. ($comment->Users->image_path ?? 'profile.svg')) }}" alt="" class="profile-photo-sm">
                                         <p>
                                             <a href="{{ route('profile.show', ['id' => $comment->Users->id]) }}" class="profile-link">{{ $comment->Users->name ?? '' }} </a>
                                             <i class="em em-laughing"></i> 
                                             {{ $comment->comment_content ?? '' }} 
-                                        </p>
-                                    </div>
-                                    <hr class="hr" />
-                                @endforeach
-                            @endif
+                                        </p>    
+                                    @else
+                                        <span>
+                                            Doesn't have comment
+                                        </span>
+                                    @endif
+                                </div>
+                                <hr class="hr" />
+                            @endforeach
 
                             <!-- input comment -->
                             <div class="post-comment">
