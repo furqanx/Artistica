@@ -84,6 +84,15 @@ class PostController extends Controller
         // Redirect ke halaman postingan
         return redirect()->route('post.show', ['id' => $id])->with('success', 'Komentar berhasil diupload');
     }
+
+    public function destroy($id)
+    {
+        /** menghapus postingan */
+        $post = Posts::findOrFail($id);
+        $post->delete();
+
+        return redirect()->route('home')->with('success', 'Postingan berhasil dihapus.');
+    }
 }
 
 
