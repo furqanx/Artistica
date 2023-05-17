@@ -47,6 +47,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/post/{id?}', [PostController::class, 'show'])->name('post.show');
     /** Route untuk menghapus postingan */
     Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
+    /** Route untuk menyukai postingan */
+    Route::post('/post/like/{id}', [PostController::class, 'like'])->name('post.like'); // masih harus diperbaiki
     /** Route untuk memberi komentar postingan */
     Route::put('/comment/{id}', [PostController::class, 'comment'])->name('comment');
 

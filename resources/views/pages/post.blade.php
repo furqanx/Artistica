@@ -3,6 +3,7 @@
 @section('content')
 
     @include('components.navbar')
+    
 
     {{-- <p>Gambar postingan : <img src="{{ asset('img/post/'. $posts->image_path) }}" width="200" height="200"> </p>
     <p>Foto profil pemilik postingan : <img src="{{ asset('img/profile/'. ($posts->Users->image_path ?? 'profile.svg')) }}" width="100" height="100"></p>
@@ -40,9 +41,20 @@
                             </div>
                             
                             {{-- <div class="reaction">
-                                <a class="btn text-green"><i class="fa fa-thumbs-up"></i> 13</a>
-                                <a class="btn text-red"><i class="fa fa-thumbs-down"></i> 0</a>
-                            </div> --}}
+                                <a class="btn text-green" href="{{ route('post.like', ['id' => $posts->id]) }}">
+                                    <i class="fa fa-thumbs-up">
+                                    </i> {{ $likeCount }}
+                                </a> --}}
+                                {{-- <a class="btn text-red"><i class="fa fa-thumbs-down"></i> 0</a> --}}
+                            {{-- </div> --}}
+                            <div class="reaction">
+                                <form action="{{ route('post.like', ['id' => $posts->id]) }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="btn text-green">
+                                        <i class="fa fa-thumbs-up"></i> {{ $likeCount }}
+                                    </button>
+                                </form>
+                            </div>
                             
                             <div class="line-divider"></div>
 

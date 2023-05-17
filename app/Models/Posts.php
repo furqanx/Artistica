@@ -28,6 +28,11 @@ class Posts extends Model
         return $this->hasMany(Comments::class, 'post_id', 'id');
     }
 
+    public function post_likes()
+    {
+        return $this->hasMany(Post_Likes::class, 'post_id', 'id');
+    }
+
     public function getPublishedTimeAttribute()
     {
         return Carbon::parse($this->created_at)->diffForHumans();
