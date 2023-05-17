@@ -45,6 +45,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/post', [PostController::class, 'store'])->name('post.store');
     /** Route untuk melihat postingan */
     Route::get('/post/{id?}', [PostController::class, 'show'])->name('post.show');
+    /** Route untuk menghapus postingan */
+    Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('post.destroy');
     /** Route untuk memberi komentar postingan */
     Route::put('/comment/{id}', [PostController::class, 'comment'])->name('comment');
 
@@ -54,6 +56,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile/{id}/edit', [ProfileController::class, 'edit'])->name('profile.edit');
     /** Route untuk memperbarui data profile tertentu. */
     Route::put('/profile/{id}', [ProfileController::class, 'update'])->name('profile.update');
-    // /** Route untuk menghapus suatu user */
-    // Route::put('/profile/{id}', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    /** Route untuk menghapus suatu user */
+    Route::delete('/profile/{id}', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });

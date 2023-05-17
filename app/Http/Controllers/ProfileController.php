@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Concerns\HasAttributes;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Laravel\Sanctum\HasApiTokens as SanctumHasApiTokens;
 
 class ProfileController extends Controller
@@ -71,15 +73,16 @@ class ProfileController extends Controller
         return redirect()->route('profile.show')->with('success', 'Profil berhasil diperbarui!');
     }
 
-    // /**
-    //  * Menampilkan pop-up konfirmasi dan menghapus user jika disetujui.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\RedirectResponse
-    //  */
-    // public function confirmDeleteUser($id)
-    // {
-    //     return view('components.confirm-delete', compact('id'));
-    // }
+    public function destroy($id)
+    {
+        // Hapus akun pengguna
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        // Logout pengguna
+        Auth::logout();
+
+        return redirect()->route('login')->with('success', 'Akun berhasil dihapus.');
+    }
 
 }
