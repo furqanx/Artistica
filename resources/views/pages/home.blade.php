@@ -40,13 +40,14 @@
 
                             <div class="card" width="350" height="400">
                                 
-                                <!-- Lokasi postingan -->
                                 <div>
-                                <img src="{{ asset('img/profile/'. ($post->Users->image_path ?? 'profile.svg')) }}" alt="user" class="profile-photo-md pull-left m-1 mr-3" style="height:40px; width:40px;">
+                                    <img src="{{ asset('img/profile/'. ($post->users->image_path ?? 'profile.svg')) }}" alt="user" class="profile-photo-md pull-left m-1 mr-3" style="height:40px; width:40px;">
 
-                                    <div class="d-flex justify-content-between">
-                                        
-                                        <div><b>{{ $post->title }}</b><br> Paris, France</div>
+                                    <div class="d-flex justify-content-between">    
+                                        <div class="align-self-center medium">
+                                            <b>{{ $post->users->name }}</b>
+                                            <p class="align-self-end" style="font-size: 12px">{{ $post->published_time }}</p>
+                                        </div>
                                         <div>
                                             <button class="btn btn-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <span id="boot-icon" class="bi bi-three-dots-vertical" style="font-size: 20px;"></span>
@@ -67,11 +68,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <img src="{{ asset('img/post/' . $post->image_path) }}" 
                                 class="card-img-top img-fluid" alt="...">
                                 <div class="card-body" style="z-index: 1;">
-                                    <!-- Title postingan -->
-                                    <p class="card-text">{{ $post->title }}</p>
+                                    <div class="d-flex mb-4">
+                                        <b>{{ $post->users->name }}</b>&nbsp;&nbsp;  
+                                        <p class="card-text">{{ $post->description }}</p>
+                                    </div>
                                     <div class="d-flex justify-content-between">
                                         <div>
                                             <a href="{{ route('post.show', ['id' => $post->id]) }}" class="btn btn-primary">
@@ -79,7 +83,9 @@
                                             </a>
                                         </div>
                                     </div>
+                                    {{-- <p class="tiny align-self-end">{{ $post->published_time }}</p> --}}
                                 </div>
+                                
                             </div>
                         </div>
                     </div>    
