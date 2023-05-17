@@ -35,11 +35,17 @@
                 
                 @foreach ($posts as $post)
                     <div class="row justify-content-center p-3">
+                        
                         <div class="col-sm-12 col-md-8 col-lg-6">
+
                             <div class="card" width="350" height="400">
+                                
                                 <!-- Lokasi postingan -->
                                 <div>
+                                <img src="{{ asset('img/profile/'. ($post->Users->image_path ?? 'profile.svg')) }}" alt="user" class="profile-photo-md pull-left m-1 mr-3" style="height:40px; width:40px;">
+
                                     <div class="d-flex justify-content-between">
+                                        
                                         <div><b>{{ $post->title }}</b><br> Paris, France</div>
                                         <div>
                                             <button class="btn btn-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
