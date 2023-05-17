@@ -37,7 +37,7 @@
                                     <a href="{{ route('profile.show', ['id' => $posts->Users->id]) }}" class="profile-link">{{ $posts->Users->name }}</a> 
                                     {{-- <span class="following">following</span> --}}
                                 </h5>
-                                <p class="text-muted">Published a photo about {{ $posts->published_time }}</p>
+                                <p class="text-muted small">Published a photo about {{ $posts->published_time }}</p>
                             </div>
                             
                             {{-- <div class="reaction">
@@ -58,7 +58,7 @@
                             
                             <div class="line-divider"></div>
 
-                            <div class="post-text">
+                            <div class="post-text mb-5">
                                 <p>{{ $posts->description }} 
                                     <i class="em em-anguished"></i> 
                                     <i class="em em-anguished"></i> 
@@ -87,12 +87,12 @@
                             @endforeach
 
                             <!-- input comment -->
-                            <div class="post-comment">
+                            <div class="post-comment d-flex">
+                                <img src="{{ asset('img/profile/'. ($auth_user->image_path ?? 'profile.svg')) }}" alt="" class="profile-photo-sm">
                                 <form action="{{ route('comment', ['id' => $posts->id]) }}" enctype="multipart/form-data" method="POST">
                                     @csrf
                                     @method('PUT')
 
-                                    <img src="{{ asset('img/profile/'. ($auth_user->image_path ?? 'profile.svg')) }}" alt="" class="profile-photo-sm">
                                     <input type="text" class="form-control col-20" placeholder="Post a comment"  name="comment">
                                     <button type="submit">Send</button>
                                 </form>
