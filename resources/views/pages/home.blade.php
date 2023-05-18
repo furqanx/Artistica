@@ -27,24 +27,28 @@
         </ul>
     </div> --}}
 
+    <!-- tab content -->
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="container p-3 mb-2 bg-light text-dark">
                 <h1></h1>
 
-                
+                <!-- each post  -->
                 @foreach ($posts as $post)
                     <div class="row justify-content-center p-3">
                         
                         <div class="col-sm-12 col-md-8 col-lg-6">
 
+                        <!-- post card -->
                             <div class="card" width="350" height="400">
                                 
                                 <div>
-                                <a href="{{ route('profile.show', [$post -> users->id]) }}" class="w3-bar-item w3-button">
 
+                                <!-- profile show on click -->
+                                <a href="{{ route('profile.show', [$post -> users->id]) }}" class="w3-bar-item w3-button">
                                     <img src="{{ asset('img/profile/'. ($post->users->image_path ?? 'profile.svg')) }}" alt="user" class="profile-photo-md pull-left m-1 mr-3" style="height:40px; width:40px;">
-    </a>
+                                </a>
+
                                     <div class="d-flex justify-content-between">    
                                         <div class="align-self-center medium">
                                             <b>{{ $post->users->name }}</b>
@@ -71,6 +75,7 @@
                                     </div>
                                 </div>
                                 
+                                <!-- source show post image -->
                                 <img src="{{ asset('img/post/' . $post->image_path) }}" 
                                 class="card-img-top img-fluid" alt="...">
                                 <div class="card-body" style="z-index: 1;">

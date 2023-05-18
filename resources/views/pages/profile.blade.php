@@ -31,6 +31,7 @@
                             <h5>&nbsp;{{ $users->name }}</h5>
                             <p>&nbsp;{{ $users->address }}</p>
                         </div>
+                        
                 <!-- PR : buat pop up -->
     <div class="dropdown ml-auto p-3">
         <form action="{{ route('profile.destroy', ['id' => auth()->user()->id]) }}" method="POST">

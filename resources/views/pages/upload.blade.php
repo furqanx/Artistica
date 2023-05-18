@@ -4,6 +4,7 @@
 
     @include('components.navbar')
 
+    <!-- card -->
     <div class="card-body px-sm-4 px-0 mt-5 mb-5 mx-auto">
 
         <div class="row justify-content-center round">
