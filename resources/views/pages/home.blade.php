@@ -41,10 +41,10 @@
                             <div class="card" width="350" height="400">
                                 
                                 <div>
-                               
+                                <a href="{{ route('profile.show', [$post -> users->id]) }}" class="w3-bar-item w3-button">
 
                                     <img src="{{ asset('img/profile/'. ($post->users->image_path ?? 'profile.svg')) }}" alt="user" class="profile-photo-md pull-left m-1 mr-3" style="height:40px; width:40px;">
-    
+    </a>
                                     <div class="d-flex justify-content-between">    
                                         <div class="align-self-center medium">
                                             <b>{{ $post->users->name }}</b>
