@@ -50,8 +50,8 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 -->
 
 ## Contributors
-- Name : Furqan Al Ghifari Zulva (2108107010053)
-- Name : Muhammad Danish Rabbani ()
+- Furqan Al Ghifari Zulva (2108107010053)
+- Muhammad Danish Rabbani (2108107010081)
 
 <!--
 ## Code of Conduct
