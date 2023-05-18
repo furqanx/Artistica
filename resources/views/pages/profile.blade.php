@@ -9,10 +9,8 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="container rounded bg-white mt-4 mb-2 py-3 px-5">
                 <div class="card">
-                    <div
-                        class="rounded-top text-white d-flex flex-row"
-                        style="background-color: #000; height: 210px">
-                        <div class="ms-4 mt-5 d-flex flex-column m-4" style="width: 150px">
+                <div class="rounded-top text-white d-flex flex-row" style="background-color: #000; height: 210px">
+                <div class="ms-4 mt-5 d-flex flex-column m-4" style="width: 150px">
                             <img
                                 src="{{ asset('img/profile/'. ($users->image_path ?? 'profile.svg')) }}"
                                 alt="Generic placeholder image"
@@ -33,21 +31,26 @@
                             <h5>&nbsp;{{ $users->name }}</h5>
                             <p>&nbsp;{{ $users->address }}</p>
                         </div>
+                <!-- PR : buat pop up -->
+    <div class="dropdown ml-auto p-3">
+        <form action="{{ route('profile.destroy', ['id' => auth()->user()->id]) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <span id="boot-icon" class="bi bi-three-dots-vertical" style="font-size: 24px; color:#ffffff" type="button"
+                id="dropdownMenuButton" data-toggle="dropdown"></span>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <button type="submit" class="btn btn-link text-danger dropdown-item" onclick="return confirm('Are you sure ?')">
+                    Delete Account
+                </button>
+            </div>
+        </form>
+    </div>
 
-                        <!-- PR : buat pop up -->
-                        <div class="dropdown">
-                            <form action="{{ route('profile.destroy', ['id' => auth()->user()->id]) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <span id="boot-icon" class="bi bi-three-dots-vertical" style="font-size: 24px; 
-                                color:#ffffff" type="button" id="dropdownMenuButton" data-toggle="dropdown"></span>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <button type="submit" class="btn btn-link text-danger dropdown-item" onclick="return confirm('Are you sure ?')">
-                                        Delete Account
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
+
+
+                        
+
+                        
                         
                     </div>
 
