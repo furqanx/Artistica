@@ -51,10 +51,10 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ## Contributors
 - Name : Furqan Al Ghifari Zulva 
-  NIM  : 2108107010053
+- NIM  : 2108107010053
   
 - Name : Muhammad Danish Rabbani
-  NIM  : 
+- NIM  : 
 
 <!--
 ## Code of Conduct
