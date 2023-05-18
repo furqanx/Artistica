@@ -11,17 +11,13 @@
 
 ## About Artistica
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-<!--
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
--->
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Selamat datang di Artistica, aplikasi social network sederhana yang memungkinkan pengguna untuk berbagi dan mengekspresikan kreativitas melalui foto-foto mereka. Dalam Artistica, setiap pengguna dapat mengunggah foto-foto mereka sendiri, yang kemudian dapat dilihat dan dinikmati oleh pengguna lain di platform ini.
+
+Salah satu fitur unggulan Artistica adalah kemampuan untuk memberikan "like" pada postingan yang menarik. Ketika pengguna menemukan foto yang disukai, mereka dapat dengan mudah memberikan tanda suka sebagai bentuk apresiasi. Ini memungkinkan pengguna untuk saling memberikan dukungan dan menghubungkan dengan karya-karya kreatif dari pengguna lain di komunitas Artistica.
+
+Selain itu, Artistica juga menyediakan fitur komentar yang memungkinkan pengguna untuk berinteraksi dan berbagi pendapat tentang postingan orang lain. Pengguna dapat dengan bebas memberikan komentar yang positif dan membangun, mempromosikan diskusi yang produktif, dan menciptakan ikatan sosial dalam komunitas kami.
+
+Kami mengundang Anda untuk bergabung dengan Artistica dan menjelajahi dunia yang penuh inspirasi, kreativitas, dan persahabatan. Bersama-sama, mari kita berbagi keindahan, membangun konektivitas, dan merayakan keanekaragaman di dunia seni fotografi. Selamat menikmati pengalaman di Artistica!
 
 <!-- 
 ## Learning Laravel
