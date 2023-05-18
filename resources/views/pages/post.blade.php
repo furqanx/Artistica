@@ -31,6 +31,7 @@
                     <div class="post-container">
                         <img src="{{ asset('img/profile/'. ($posts->Users->image_path ?? 'profile.svg')) }}" alt="user" class="profile-photo-md pull-left">
                         
+                        <!-- post detail -->
                         <div class="post-detail">
                             <div class="user-info">
                                 <h5>
@@ -58,6 +59,7 @@
                             
                             <div class="line-divider"></div>
 
+                            <!-- post description -->
                             <div class="post-text mb-5">
                                 <p>{{ $posts->description }} 
                                     <i class="em em-anguished"></i> 
@@ -68,6 +70,7 @@
                             
                             <div class="line-divider"></div>
                             
+                            <!-- post comment -->
                             @foreach ($comments as $comment)
                                 <div class="post-comment">
                                     @if (!empty($comment->Users->id))
