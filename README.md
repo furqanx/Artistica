@@ -53,6 +53,9 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - Furqan Al Ghifari Zulva (2108107010053)
 - Muhammad Danish Rabbani (2108107010081)
 
+## How to use 
+- clone repository using git clone 
+
 <!--
 ## Code of Conduct
 
