@@ -54,7 +54,10 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - Muhammad Danish Rabbani (2108107010081)
 
 ## How to use 
-- clone repository using git clone 
+- clone repository using `git clone https://github.com/furqanx/Project-Artistica-PBW.git` 
+- install composer using `composer install`
+- generate new key using `php artisan key:generate`
+- migrating table using `php artisan migrate`
 
 <!--
 ## Code of Conduct
